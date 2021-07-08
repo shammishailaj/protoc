@@ -73,9 +73,6 @@ If using Gradle as a build system, you will need to create a custom task that wi
 ```gradle
 repositories {
   mavenCentral()
-  maven {
-    url "https://maven.pkg.github.com/sixt/protoc"
-  }
 }
 
 apply plugin: 'java'
@@ -87,7 +84,7 @@ dependencies {
 // Create separate configuration for protoc artifacts
 configurations { protoc }
 dependencies {
-  protoc group: 'com.sixt.protobuf', name: 'protoc', version: '3.10.0', ext: 'exe',
+  protoc group: 'com.sixt.protobuf', name: 'protoc', version: '3.11.4-2', ext: 'exe',
   classifier: [
     'Windows:amd64': 'windows-x86_64',
     'Windows:i386': 'windows-x86_32',
